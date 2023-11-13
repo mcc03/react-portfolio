@@ -3,6 +3,7 @@ const Hero = () => {
 		<div className="hero min-h-screen bg-base-200 px-4">
 			<div className="hero-content flex-col lg:flex-row-reverse">
 				<img
+					alt=""
 					src="https://picsum.photos/200/300"
 					className="max-w-sm rounded-lg shadow-2xl"
 				/>
