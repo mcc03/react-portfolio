@@ -7,12 +7,17 @@
             {
                 "caption": "Screenshot of the code",
                 "path": "https://picsum.photos/id/0/300/200"
+            },
+            {
+                "caption": "Screenshot of the code",
+                "path": "https://picsum.photos/id/0/300/200"
             }
         ],
         "date": "2023",
         "tags": ["JavaScript", "React", "HTML", "Front-End"],
         "website": "http://google.com",
-        "github": "http://github.com"
+        "github": "http://github.com",
+        "demo": true
 
     },
     {
