@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import projectsJSON from '../../assets/data/projects.json';
+import axios from "axios";
+//import projectsJSON from '../../assets/data/projects.json';
 
 const Show = () => {
     const [project, setProject] = useState(null);
@@ -12,8 +13,16 @@ const Show = () => {
         //     return project.slug === slug;
         // });
 
+        axios.get('https://marlon-portfolio-cb63d-default-rtdb.europe-west1.firebasedatabase.app/.json')
+        .then(response => {
+            setProject(response.data.find(project => project.slug === slug));
+        })
+        .catch(e => {
+            console.error(e);
+        })
+        
         // find will find, then stop
-        setProject(projectsJSON.find(project => project.slug === slug));
+        //setProject(projectsJSON.find(project => project.slug === slug));
 
     }, []);
 

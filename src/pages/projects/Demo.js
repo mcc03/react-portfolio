@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense } from "react";
-import projectsJSON from '../../assets/data/projects.json';
+//import projectsJSON from '../../assets/data/projects.json';
+import axios from "axios";
 
 
 const Demo = () => {
@@ -12,16 +13,24 @@ const Demo = () => {
 
     useEffect(() => {
 
-        let proj = projectsJSON.find(project => project.slug === slug);
+        axios.get('https://marlon-portfolio-cb63d-default-rtdb.europe-west1.firebasedatabase.app/.json')
+        .then(response => {
+            let proj = response.data.find(project => project.slug === slug);
 
-        if(!proj){
-            navigate("/projects")
-        } else if (!proj.demo){
-            navigate(`/projects/${proj.slug}`);
-        }
+            if(!proj){
+                navigate("/projects")
+            } else if (!proj.demo){
+                navigate(`/projects/${proj.slug}`);
+            }
+    
+            // find will find, then stop
+            setProject(proj);
+        })
+        .catch(e => {
+            console.error(e);
+        })
 
-        // find will find, then stop
-        setProject(proj);
+
 
     }, []);
 
