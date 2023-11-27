@@ -32,7 +32,25 @@
         ],
         "date": "2023",
         "tags": ["JavaScript", "React", "HTML", "Front-End", "Rest Client", "API"],
-        "github": "http://github.com"
+        "github": "http://github.com",
+        "demo": true
+
+    },
+    {
+        "slug" : "laravel-app",
+        "title": "Laravel Bookstore",
+        "description": "This is a Laravel App I made using React. I found this project interesting, I learn about a lot.",
+        "images": [
+            {
+                "caption": "Screenshot of the code",
+                "path": "https://picsum.photos/id/0/300/200"
+            }
+        ],
+        "date": "2023",
+        "tags": ["PHP", "HTML", "Back-End", "CSS"],
+        "website": "http://google.com",
+        "github": "http://github.com",
+        "demo": false
 
     }
 ]

@@ -20,6 +20,12 @@ const Show = () => {
     // if project does not exist, do this
     if(!project) { return (<h1>Project does not exist</h1>)};
 
+    const tags = project.tags.map((tag, i) => {
+        return (
+            <div key={i} className="badge badge-outline badge-primary">{tag}</div>
+        );
+    })
+
     let imageCarousel = "";
 
     if(project.images) {
@@ -27,7 +33,7 @@ const Show = () => {
         let items = project.images.map((image, i) => {
             return (
                 <div id={`item${i}`} className="carousel-item w-full">
-                    <img title={image.caption} src={`${image.path}`} className="w-full" />
+                    <img title={image.caption} src={`${image.path}`} className="" />
                 </div> 
             );
         });
@@ -57,9 +63,9 @@ const Show = () => {
             <p><b>Description:</b> {project.description}</p>
             {imageCarousel}
             <p><b>Date:</b> {project.date}</p>
-            <p><b>Tags:</b> {project.tags}</p>
-            <p><b>Website:</b> {project.website}</p>
-            <p><b>GitHub:</b> {project.github}</p>
+            <p><b>Tags:</b> {tags}</p>
+            <p><a href={project.website} target="_blank" rel="noreferrer" className="btn btn-primary">WEB</a></p>
+            <p><a href={project.github} target="_blank" rel="noreferrer" className="btn btn-primary" >GITHUB</a></p>
 
             {/* turney to display demo */}
             {(project.demo) ? (
