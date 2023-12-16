@@ -52,5 +52,39 @@
         "github": "http://github.com",
         "demo": false
 
+    },
+    {
+        "slug" : "countries-api",
+        "title": "Countries API",
+        "description": "This is an API App I made using React. I found this project interesting, I learn about a lot.",
+        "images": [
+            {
+                "caption": "Screenshot of the code",
+                "path": "https://picsum.photos/id/0/300/200"
+            }
+        ],
+        "date": "2023",
+        "tags": ["React", "Front-End"],
+        "website": "https://ca1-countries-50224.web.app/",
+        "github": "http://github.com",
+        "demo": false
+
+    },
+    {
+        "slug" : "college-api",
+        "title": "College API",
+        "description": "This is an API App I made using React. I found this project interesting, I learn about a lot.",
+        "images": [
+            {
+                "caption": "Screenshot of the code",
+                "path": "https://picsum.photos/id/0/300/200"
+            }
+        ],
+        "date": "2023",
+        "tags": ["React", "Front-End", "Tailwind"],
+        "website": "https://ca2-college.web.app/",
+        "github": "http://github.com",
+        "demo": false
+
     }
 ]

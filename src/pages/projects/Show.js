@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 //import projectsJSON from '../../assets/data/projects.json';
 
 const Show = () => {
@@ -56,7 +57,7 @@ const Show = () => {
 
         imageCarousel = (
             <>
-            <div className="carousel w-full">
+            <div className="carousel">
                 {items}
             </div> 
             <div className="flex justify-center w-full py-2 gap-2">
@@ -67,20 +68,48 @@ const Show = () => {
     }
 
     return (
-        <>
-            <p><b>Title:</b> {project.title}</p>
-            <p><b>Description:</b> {project.description}</p>
+        // bg-gradient-to-r from-black to-blue-500
+        <div className="flex items-center justify-center py-10 bg-slate-200">
+                <div className="card w-[64rem] bg-slate-100 shadow-md text-black">
+        <div className="card-body justify-center">
+
+            <label className="text-gray-400 font-light tracking-widest">Title</label>
+            <p className="text-4xl">{project.title}</p>
+            <hr/>
+
+            <label className="text-gray-400 font-light tracking-widest">Description</label>
+            <p className="text-lg">{project.description}</p>
+            <hr/>
+
+            <label className="text-gray-400 font-light tracking-widest">Screenshots</label>
             {imageCarousel}
-            <p><b>Date:</b> {project.date}</p>
-            <p><b>Tags:</b> {tags}</p>
-            <p><a href={project.website} target="_blank" rel="noreferrer" className="btn btn-primary">WEB</a></p>
-            <p><a href={project.github} target="_blank" rel="noreferrer" className="btn btn-primary" >GITHUB</a></p>
+            <hr/>
+
+            <label className="text-gray-400 font-light tracking-widest">Date</label>
+            <p className="text-lg">{project.date}</p>
+            <hr/>
+
+            <label className="text-gray-400 font-light tracking-widest">Tags</label>
+                <p>{tags}</p>
+            <hr/>
+
+            <label className="text-gray-400 font-light tracking-widest">Links</label>
+            <div className="flex gap-2">
+            <Link to={project.website} target="_blank" rel="noreferrer" className="btn btn-primary">WEB</Link>
+            <Link to={project.github} target="_blank" rel="noreferrer" className="btn btn-primary" >GITHUB</Link>
+            </div>
 
             {/* turney to display demo */}
             {(project.demo) ? (
-                <p>Demo goes here</p>
+                <Link to={`/projects/${project.slug}/demo`} target="_blank" rel="noreferrer" 
+                className="btn btn-primary text-white bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500" >DEMO</Link>
             ) : ""}
-        </>
+            
+            </div>
+        </div>
+
+
+        </div>
     );
 }
 

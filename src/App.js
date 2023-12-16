@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 const App = () => {
   return (
 
-    <div className='container mx-auto'>
+    <div className='mx-auto'>
           
     <Router>
       <Navbar/>
@@ -32,7 +32,6 @@ const App = () => {
           <Route path='*' element={<PageNotFound/>} />
       </Routes>
       <Footer/>
-
     </Router>
     </div>
 
