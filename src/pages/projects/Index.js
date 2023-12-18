@@ -28,7 +28,7 @@ const Index = () => {
     console.log(projects)
 
     return (
-            <div className="flex flex-wrap justify-center py-10">
+            <div className="flex flex-wrap justify-center py-10 bg-slate-200">
                 <div className="grid grid-cols-3 gap-4">
                     {projectList}
                 </div>

@@ -43,7 +43,7 @@ const Show = () => {
         let items = project.images.map((image, i) => {
             return (
                 <div id={`item${i}`} className="carousel-item w-full">
-                    <img title={image.caption} src={`${image.path}`} className="" />
+                    <img title={image.caption} src={`${image.path}`} className="w-full max-h-[20rem]" />
                 </div> 
             );
         });
@@ -70,7 +70,7 @@ const Show = () => {
     return (
         // bg-gradient-to-r from-black to-blue-500
         <div className="flex items-center justify-center py-10 bg-slate-200">
-                <div className="card w-[64rem] bg-slate-100 shadow-md text-black">
+                <div className="card w-[64rem] bg-slate-50 shadow-md text-black">
         <div className="card-body justify-center">
 
             <label className="text-gray-400 font-light tracking-widest">Title</label>
@@ -90,7 +90,7 @@ const Show = () => {
             <hr/>
 
             <label className="text-gray-400 font-light tracking-widest">Tags</label>
-                <p>{tags}</p>
+                <p className="card-actions">{tags}</p>
             <hr/>
 
             <label className="text-gray-400 font-light tracking-widest">Links</label>

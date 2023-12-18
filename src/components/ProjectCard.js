@@ -10,13 +10,13 @@ const ProjectCard = ({ project }) => {
 
 	return (
 
-		<div className="card max-w-[24rem] bg-stone-100 shadow-xl grid grid-cols-1">
-			<figure>
-				<img
+		<div className="card max-w-[24rem] bg-slate-100 shadow-xl grid grid-cols-1">
+
+				<img className="w-full max-h-[14rem] rounded-t-lg"
 					src={project.images[0].path}
 					alt={project.images[0].caption}
 				/>
-			</figure>
+
 			<div className="card-body">
 				<h2 className="card-title text-black">
 					{project.title}
