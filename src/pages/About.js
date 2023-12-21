@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const About = () => {
     return (
         <div class="bg-slate-200">
-    <div class="container mx-auto py-10">
+    <div class="container mx-auto pt-10 pb-72">
         <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div class="col-span-4 sm:col-span-3">
                 <div class="bg-slate-50 shadow rounded-lg p-6">
