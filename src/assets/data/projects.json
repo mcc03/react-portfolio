@@ -16,7 +16,7 @@
         "date": "2023",
         "tags": ["JavaScript", "React", "HTML", "Front-End"],
         "website": "http://google.com",
-        "github": "http://github.com",
+        "github": "https://github.com/mcc03/react-todo",
         "demo": true
 
     },
@@ -32,25 +32,8 @@
         ],
         "date": "2023",
         "tags": ["JavaScript", "React", "HTML", "Front-End", "Rest Client", "API"],
-        "github": "http://github.com",
+        "github": "https://github.com/mcc03/react-giph",
         "demo": true
-
-    },
-    {
-        "slug" : "laravel-app",
-        "title": "Laravel Bookstore",
-        "description": "This is a Laravel App I made using React. I found this project interesting, I learn about a lot.",
-        "images": [
-            {
-                "caption": "Screenshot of the code",
-                "path": "https://picsum.photos/id/0/300/200"
-            }
-        ],
-        "date": "2023",
-        "tags": ["PHP", "HTML", "Back-End", "CSS"],
-        "website": "http://google.com",
-        "github": "http://github.com",
-        "demo": false
 
     },
     {
@@ -66,7 +49,7 @@
         "date": "2023",
         "tags": ["React", "Front-End"],
         "website": "https://ca1-countries-50224.web.app/",
-        "github": "http://github.com",
+        "github": "https://github.com/mcc03/ca1-countries",
         "demo": false
 
     },
@@ -83,7 +66,7 @@
         "date": "2023",
         "tags": ["React", "Front-End", "Tailwind"],
         "website": "https://ca2-college.web.app/",
-        "github": "http://github.com",
+        "github": "https://github.com/mcc03/ca2-college",
         "demo": false
 
     }
